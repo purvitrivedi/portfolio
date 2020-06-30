@@ -1,8 +1,7 @@
 <template>
   <div class="nav">
-    <h1>Purvi Trivedi</h1>
+    <router-link to="/" class="name">Purvi Trivedi</router-link>
     <div class="nav-items">
-      <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
   </div>
@@ -20,5 +19,14 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .name {
+    font-size: 50px;
+  }
 }
 </style>

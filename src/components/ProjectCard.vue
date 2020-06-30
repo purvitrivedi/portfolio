@@ -1,27 +1,23 @@
 <template>
-  <div :class="['card-wrapper', size]">{{ text }}</div>
+  <div :class="['card-wrapper', size]">
+    <img :src="require(`@/assets/${img}`)">
+  </div>
 </template>
 
 <script>
 export default {
   name: 'ProjectCard',
-  props: ['size', 'text']
+  props: ['size', 'text', 'img']
 }
 </script>
 
 <style lang="scss">
 .half {
-  display: inline-block;
-  background-color: red;
-  width: 40%;
-  margin: 10px;
-  padding: 10px;
+  background-color: lightblue;
 }
 
 .full {
-  background-color: blue;
-  margin: 10px;
-  padding: 10px;
-  color: white;
+  width: 100%;
+  background-color: rgb(255, 23, 100);
 }
 </style>
