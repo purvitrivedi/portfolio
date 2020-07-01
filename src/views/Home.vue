@@ -31,25 +31,25 @@ export default {
             heading: 'Coder',
             projects: [
               {
-                name: 'Search & Play',
+                name: 'Filtr',
                 size: 'half',
-                img: 'logo.png'
+                img: 'filtr.png'
               },
               {
                 name: 'Tetris',
                 size: 'half',
-                img: 'logo.png'
-                
-              },
-              {
-                name: 'Filtr',
-                size: 'full',
-                img: 'logo.png'
+                img: 'tetris-5.png'
               },
               {
                 name: 'Hikr',
                 size: 'full',
-                img: 'logo.png'
+                img: 'hikr-2.png'
+              },
+
+              {
+                name: 'Search & Play',
+                size: 'full',
+                img: 'search-play.png'
               }
             ]
           },
@@ -76,12 +76,12 @@ export default {
               {
                 name: 'KALA',
                 size: 'half',
-                img: '../assets/logo.png'
+                img: 'logo.png'
               },
               {
                 name: 'Women in Music Tech',
                 size: 'half',
-                img: '../assets/logo.png'
+                img: 'logo.png'
               }
             ]
           }

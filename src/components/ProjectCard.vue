@@ -1,6 +1,6 @@
 <template>
-  <div :class="['card-wrapper', size]">
-    <img :src="require(`@/assets/${img}`)">
+  <div :class="size">
+    <img :src="require(`@/assets/${img}`)" :class="text" />
   </div>
 </template>
 
@@ -12,12 +12,4 @@ export default {
 </script>
 
 <style lang="scss">
-.half {
-  background-color: lightblue;
-}
-
-.full {
-  width: 100%;
-  background-color: rgb(255, 23, 100);
-}
 </style>
