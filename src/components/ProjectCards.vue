@@ -6,7 +6,11 @@
           <div class="project-wrapper">
             <img :src="require(`@/assets/${project.img}`)" />
             <div class="project-details">
-              {{ project.name }}
+              <h2>{{ project.name }}</h2>
+              <h4>{{ project.description }}</h4>
+              <div class="project-links">
+                
+              </div>
             </div>
           </div>
         </div>
@@ -38,7 +42,6 @@ export default {
 .type-of-work {
   margin: 1px 0px;
   padding: 10px;
-  // background-color: rgb(226, 230, 173);
   text-align: center;
 }
 
@@ -66,9 +69,9 @@ export default {
     }
   }
 
-   .project-details {
-      height: calc(100% - 5px);
-    }
+  .project-details {
+    height: calc(100% - 5px);
+  }
 }
 
 .project-wrapper {
@@ -86,10 +89,18 @@ export default {
     opacity: 0;
     top: 0;
     transition: all 1s ease;
-    background-color: black;
-    border: none;
-    color: white;
     width: 100%;
+
+    background-color: #1b1b1b;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
   }
 }
 
