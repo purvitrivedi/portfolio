@@ -2,10 +2,13 @@
   <div class="home">
     <Bio />
     <div class="work">
-      <WorkType
+      <div class="types">
+        <p v-for="type in types" :key="type">{{ type }}</p>
+      </div>
+      <ProjectCards
         v-for="type in work.types"
         :key="type.id"
-        :text="type.heading"
+        :heading="type.heading"
         :projects="type.projects"
       />
     </div>
@@ -14,40 +17,46 @@
 
 <script>
 import Bio from '../components/Bio'
-import WorkType from '../components/WorkType'
+import ProjectCards from '../components/ProjectCards'
 
 export default {
   name: 'Home',
   components: {
     Bio,
-    WorkType
+    ProjectCards
   },
   data() {
     return {
+      types: ['Code', 'User Research', 'Music'],
+
       work: {
         types: [
           {
             id: 1,
-            heading: 'Coder',
+            heading: 'Code',
             projects: [
               {
                 name: 'Filtr',
+                description: 'Image-editing app using Python, Django, PostgreSQL & React.js.',
                 size: 'half',
                 img: 'filtr.png'
               },
               {
                 name: 'Tetris',
+                description: 'Vanilla JavaScript, HTML & CSS.',
                 size: 'half',
                 img: 'tetris-5.png'
               },
               {
                 name: 'Hikr',
+                description: 'A full-stack Hike search & community app made using Node.js, Express, MongoDB & React.js',
                 size: 'full',
                 img: 'hikr-2.png'
               },
 
               {
                 name: 'Search & Play',
+                description: 'An interactive music search & play app made using React.js and iTunes Search API',
                 size: 'full',
                 img: 'search-play.png'
               }
@@ -55,33 +64,33 @@ export default {
           },
           {
             id: 2,
-            heading: 'User Researcher',
+            heading: 'User Research',
             projects: [
               {
                 name: 'LUMI',
                 size: 'half',
-                img: 'logo.png'
+                img: 'tetris-5.png'
               },
               {
                 name: 'ROLI Studio Player',
                 size: 'half',
-                img: 'logo.png'
+                img: 'tetris-5.png'
               }
             ]
           },
           {
             id: 3,
-            heading: 'Music projects',
+            heading: 'Music',
             projects: [
               {
                 name: 'KALA',
                 size: 'half',
-                img: 'logo.png'
+                img: 'tetris-5.png'
               },
               {
                 name: 'Women in Music Tech',
                 size: 'half',
-                img: 'logo.png'
+                img: 'tetris-5.png'
               }
             ]
           }
@@ -91,3 +100,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.types {
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 15px;
+  }
+}
+</style>
