@@ -3,7 +3,7 @@
     <Bio />
     <div class="work">
       <div class="types">
-        <p v-for="type in types" :key="type">{{ type }}</p>
+        <a v-for="type in types" :key="type" :href="`#${type.toLowerCase().split(' ').join('')}`">{{ type }}</a>
       </div>
       <ProjectCards
         v-for="type in work.types"
@@ -37,7 +37,8 @@ export default {
             projects: [
               {
                 name: 'Filtr',
-                description: 'Image-editing app using Python, Django, PostgreSQL & React.js.',
+                description:
+                  'Image-editing app using Python, Django, PostgreSQL & React.js.',
                 size: 'half',
                 img: 'filtr.png'
               },
@@ -49,14 +50,16 @@ export default {
               },
               {
                 name: 'Hikr',
-                description: 'A full-stack Hike search & community app made using Node.js, Express, MongoDB & React.js',
+                description:
+                  'A full-stack Hike search & community app made using Node.js, Express, MongoDB & React.js',
                 size: 'full',
                 img: 'hikr-2.png'
               },
 
               {
                 name: 'Search & Play',
-                description: 'An interactive music search & play app made using React.js and iTunes Search API',
+                description:
+                  'An interactive music search & play app made using React.js and iTunes Search API',
                 size: 'full',
                 img: 'search-play.png'
               }
@@ -106,8 +109,9 @@ export default {
   display: flex;
   justify-content: center;
 
-  p {
+  a {
     margin: 15px;
+    color: black;
   }
 }
 </style>

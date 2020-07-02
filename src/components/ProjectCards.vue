@@ -3,14 +3,12 @@
     <div class="projects">
       <div v-for="project in projects" :key="project.name">
         <div :class="project.size">
-          <div class="project-wrapper">
+          <div class="project-wrapper" :id="heading.toLowerCase().split(' ').join('')">
             <img :src="require(`@/assets/${project.img}`)" />
             <div class="project-details">
               <h2>{{ project.name }}</h2>
               <h4>{{ project.description }}</h4>
-              <div class="project-links">
-                
-              </div>
+              <div class="project-links"></div>
             </div>
           </div>
         </div>
@@ -98,9 +96,6 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-
   }
 }
 
