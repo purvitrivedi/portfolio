@@ -12,3 +12,9 @@ export default {
   name: 'Bio'
 }
 </script>
+
+<style lang="scss">
+.bio-wrapper {
+  margin-top: 100px;
+}
+</style>

@@ -3,28 +3,41 @@
     <div class="projects">
       <div v-for="project in projects" :key="project.name">
         <div :class="project.size">
-          <div class="project-wrapper" :id="heading.toLowerCase().split(' ').join('')">
+          <div
+            class="project-wrapper"
+            :id="
+              heading
+                .toLowerCase()
+                .split(' ')
+                .join('')
+            "
+          >
             <img :src="require(`@/assets/${project.img}`)" />
             <div class="project-details">
               <h2>{{ project.name }}</h2>
               <h4>{{ project.description }}</h4>
-              <div class="project-links"></div>
+              <div class="project-links">
+                <a :href="project.website" target="_blank"
+                  ><i class="fas fa-link"></i
+                ></a>
+                <a
+                  v-if="heading === 'Code'"
+                  :href="project.source"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="heading === 'Code'" class="skills">
-      <Skills />
-    </div>
   </div>
 </template>
 
 <script>
-import Skills from './Skills'
 export default {
   name: 'ProjectCards',
-  components: { Skills },
   props: {
     heading: {
       default: 'Other works'
@@ -37,12 +50,6 @@ export default {
 </script>
 
 <style lang="scss">
-.type-of-work {
-  margin: 1px 0px;
-  padding: 10px;
-  text-align: center;
-}
-
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +93,7 @@ export default {
     z-index: 100;
     opacity: 0;
     top: 0;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
     width: 100%;
 
     background-color: #1b1b1b;
@@ -96,6 +103,14 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .project-links {
+    a {
+      margin: 10px;
+      font-size: 40px;
+      color: white;
+    }
   }
 }
 
