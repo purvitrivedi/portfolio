@@ -48,12 +48,12 @@ const types = [
       {
         name: 'LUMI',
         size: 'half',
-        img: 'tetris-5.png'
+        img: 'lumi.png'
       },
       {
         name: 'ROLI Studio Player',
         size: 'half',
-        img: 'tetris-5.png'
+        img: 'rsp.png'
       }
     ]
   },
@@ -64,12 +64,12 @@ const types = [
       {
         name: 'KALA',
         size: 'half',
-        img: 'tetris-5.png'
+        img: 'kala.png'
       },
       {
         name: 'Women in Music Tech',
         size: 'half',
-        img: 'tetris-5.png'
+        img: 'wimt-2.png'
       }
     ]
   }

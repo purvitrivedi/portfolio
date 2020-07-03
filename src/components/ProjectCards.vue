@@ -1,37 +1,36 @@
 <template>
   <div class="projects">
+    <div
+      v-for="project in projects"
+      :key="project.name"
+      :class="project.size"
+      v-bind:style="{
+        backgroundImage: 'url(' + require(`../assets/${project.img}`) + ')'
+      }"
+    >
       <div
-        v-for="project in projects"
-        :key="project.name"
-        :class="project.size"
+        class="project-wrapper"
+        :id="
+          heading
+            .toLowerCase()
+            .split(' ')
+            .join('')
+        "
       >
-        <div
-          class="project-wrapper"
-          :id="
-            heading
-              .toLowerCase()
-              .split(' ')
-              .join('')
-          "
-        >
-          <img :src="require(`@/assets/${project.img}`)" />
-          <div class="project-details">
-            <h2>{{ project.name }}</h2>
-            <h4>{{ project.description }}</h4>
-            <div class="project-links">
-              <a :href="project.website" target="_blank"
-                ><i class="fas fa-link"></i
-              ></a>
-              <a
-                v-if="heading === 'Code'"
-                :href="project.source"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
+        <div class="project-details">
+          <h2>{{ project.name }}</h2>
+          <h4>{{ project.description }}</h4>
+          <div class="project-links">
+            <a :href="project.website" target="_blank"
+              ><i class="fas fa-link"></i
+            ></a>
+            <a v-if="heading === 'Code'" :href="project.source" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -58,24 +57,32 @@ export default {
   .half {
     display: flex;
     width: 49.85vw;
-    margin: 1px 0px;
-    height: 100%;
     justify-content: center;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5px;
 
     .project-details {
-      height: calc(100% - 6px);
+      width: 49.85vw;
+      height: 50vh;
     }
   }
 
   .full {
-    img {
-      margin-top: 3px;
-      width: 100vw;
-    }
-  }
+    width: 100vw;
+    height: 55vh;
+    margin-bottom: 5px;
 
-  .project-details {
-    height: calc(100% - 5px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .project-details {
+      width: 100vw;
+      height: 55vh;
+    }
   }
 }
 
@@ -83,18 +90,9 @@ export default {
   position: relative;
   overflow: hidden;
 
-  img {
-    width: 49.85vw;
-    margin: 0px;
-  }
-
   .project-details {
-    position: absolute;
-    z-index: 100;
     opacity: 0;
-    top: 0;
     transition: all 0.3s ease;
-    width: 100%;
 
     background-color: #1b1b1b;
     color: white;
@@ -108,7 +106,7 @@ export default {
   .project-links {
     a {
       margin: 10px;
-      font-size: 40px;
+      font-size: 30px;
       color: #06d6a0;
     }
   }
@@ -116,7 +114,6 @@ export default {
 
 .project-wrapper:hover {
   .project-details {
-    top: 0;
     opacity: 1;
   }
 }

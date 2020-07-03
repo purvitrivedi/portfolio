@@ -1,6 +1,14 @@
 <template>
   <div class="home">
-    <Bio />
+    <div class="bio-wrapper">
+      <p>
+        Software Engineer with experience in User Research.
+      </p>
+      <p>
+        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+        suscipit laboriosam nisi.
+      </p>
+    </div>
     <div class="work">
       <ProjectCards
         v-for="type in work.types"
@@ -13,14 +21,13 @@
 </template>
 
 <script>
-import Bio from '../components/Bio'
 import ProjectCards from '../components/ProjectCards'
 import types from '../data'
 
 export default {
   name: 'Home',
   components: {
-    ProjectCards, Bio
+    ProjectCards
   },
   data() {
     return {
@@ -29,3 +36,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.bio-wrapper {
+  margin: 3.3em 2em 4.1em 2em;
+
+  p {
+    font-weight: 500;
+    margin: 5px;
+    font-size: 1.4rem;
+  }
+}
+</style>

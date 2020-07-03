@@ -16,7 +16,7 @@
       >
         {{ type }}
       </router-link>
-      <div class="about">
+      <div class="about-nav">
         <router-link to="/about" tag="a">about</router-link>
       </div>
     </div>
@@ -62,21 +62,20 @@ export default {
     justify-content: flex-end;
     flex-grow: 2;
     a {
-      margin: 0 5px;
-      color: rgb(92, 90, 90);
-      font-weight: 600;
-      font-size: 0.96em;
+      margin: 0 10px;
+      color: #aaaaaa;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    a:hover {
+      color:#1b1b1b ;
     }
   }
 
-  .about {
+  .about-nav {
     .is-active {
-      color: black;
+      color: #1b1b1b;
     }
-  }
-
-  a:hover {
-    color: black;
   }
 }
 </style>
