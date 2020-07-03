@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Bio />
     <div class="work">
       <ProjectCards
         v-for="type in work.types"
@@ -12,13 +13,14 @@
 </template>
 
 <script>
+import Bio from '../components/Bio'
 import ProjectCards from '../components/ProjectCards'
 import types from '../data'
 
 export default {
   name: 'Home',
   components: {
-    ProjectCards
+    ProjectCards, Bio
   },
   data() {
     return {

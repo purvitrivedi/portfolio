@@ -1,37 +1,37 @@
 <template>
-  <div>
-    <div class="projects">
-      <div v-for="project in projects" :key="project.name">
-        <div :class="project.size">
-          <div
-            class="project-wrapper"
-            :id="
-              heading
-                .toLowerCase()
-                .split(' ')
-                .join('')
-            "
-          >
-            <img :src="require(`@/assets/${project.img}`)" />
-            <div class="project-details">
-              <h2>{{ project.name }}</h2>
-              <h4>{{ project.description }}</h4>
-              <div class="project-links">
-                <a :href="project.website" target="_blank"
-                  ><i class="fas fa-link"></i
-                ></a>
-                <a
-                  v-if="heading === 'Code'"
-                  :href="project.source"
-                  target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
+  <div class="projects">
+      <div
+        v-for="project in projects"
+        :key="project.name"
+        :class="project.size"
+      >
+        <div
+          class="project-wrapper"
+          :id="
+            heading
+              .toLowerCase()
+              .split(' ')
+              .join('')
+          "
+        >
+          <img :src="require(`@/assets/${project.img}`)" />
+          <div class="project-details">
+            <h2>{{ project.name }}</h2>
+            <h4>{{ project.description }}</h4>
+            <div class="project-links">
+              <a :href="project.website" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
+              <a
+                v-if="heading === 'Code'"
+                :href="project.source"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -85,7 +85,7 @@ export default {
 
   img {
     width: 49.85vw;
-    margin: 1px 0px;
+    margin: 0px;
   }
 
   .project-details {
@@ -109,7 +109,7 @@ export default {
     a {
       margin: 10px;
       font-size: 40px;
-      color: white;
+      color: #06d6a0;
     }
   }
 }

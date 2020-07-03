@@ -8,6 +8,7 @@
 <script>
 import Header from './components/layout/Header'
 
+
 export default {
   name: 'app',
   components: {
@@ -20,5 +21,7 @@ export default {
 <style lang="scss">
 body {
   margin: 0px;
+  // font-family: 'Questrial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>
