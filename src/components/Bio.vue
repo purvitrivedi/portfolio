@@ -20,8 +20,7 @@
     </p>
 
     <p>
-      I am now looking for my first role as a developer I am now looking to work
-      as a developer in a collaborative team where I can share my creativity and
+      I am now looking for my first role as a developer in a collaborative team where I can share my creativity and
       learn from others.
     </p>
   </div>
@@ -33,39 +32,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.long-bio {
-  padding: 0px 0.85em;
-
-  .green {
-    color: #06d6a0;
-    font-weight: bold;
-  }
-  .hello {
-    position: relative;
-    .wave {
-      font-size: 20px;
-      position: absolute;
-      margin-left: 5px;
-      top: -7px;
-      animation-name: shaking;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes shaking {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      50% {
-        transform: rotate(20deg);
-      }
-
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-  }
-}
-</style>

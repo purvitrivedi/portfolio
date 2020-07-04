@@ -1,6 +1,27 @@
 <template>
-  <div id="contact" class="contact-me">
-    <p>Get In Touch: <span>purvitriv@gmail.com</span></p>
+  <div class="contact-me">
+    <div class="email-wrapper">
+      <p>E-mail me at</p>
+      <a class="email" href="mailto: purvitriv@gmail.com"
+        >purvitriv@gmail.com</a
+      >
+    </div>
+    <div class="footer">
+      <div class="footer-icon">
+        <a
+          href="https://www.linkedin.com/in/purvitrivediprofile/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="http://instagram.com/purvitrivedi" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/purvitrivedi" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+      <p class="copyright">© Copyright 2020 Purvi Trivedi - Made with VueJS</p>
+    </div>
   </div>
 </template>
 
@@ -9,23 +30,3 @@ export default {
   name: 'Contact'
 }
 </script>
-
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-.contact-me {
-  background-color: #1b1b1b;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 20px 0px 10px 10px;
-  p {
-    font-size: 1em;
-    margin-top: 0;
-    span {
-      color:#F5DD90;
-      font-weight: 500;
-    }
-  }
-}
-</style>

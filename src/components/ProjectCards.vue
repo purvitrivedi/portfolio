@@ -18,15 +18,32 @@
         "
       >
         <div class="project-details">
-          <h2>{{ project.name }}</h2>
-          <h4>{{ project.description }}</h4>
-          <div class="project-links">
-            <a :href="project.website" target="_blank"
-              ><i class="fas fa-link"></i
-            ></a>
-            <a v-if="heading === 'Code'" :href="project.source" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
+          <div class="details-wrap">
+            <h2>{{ project.name }}</h2>
+            <p class="description">{{ project.description }}</p>
+            <div v-if="project.name === 'Filtr'">
+              <SkillsFiltr />
+            </div>
+            <div v-if="project.name === 'Hikr'">
+              <SkillsHikr />
+            </div>
+            <div v-if="project.name === 'Search + Play'">
+              <SkillsSP />
+            </div>
+            <div v-if="project.name === 'Tetris'">
+              <SkillsTetris />
+            </div>
+            <div class="project-links">
+              <a :href="project.website" target="_blank"
+                ><i class="fas fa-link"></i
+              ></a>
+              <a
+                v-if="heading === 'Code'"
+                :href="project.source"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -35,8 +52,13 @@
 </template>
 
 <script>
+import SkillsFiltr from '../components/skills/SkillsFiltr'
+import SkillsHikr from '../components/skills/SkillsHikr'
+import SkillsSP from '../components/skills/SkillsSP'
+import SkillsTetris from '../components/skills/SkillsTetris'
 export default {
   name: 'ProjectCards',
+  components: { SkillsFiltr, SkillsHikr, SkillsSP, SkillsTetris },
   props: {
     heading: {
       default: 'Other works'
@@ -53,11 +75,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  overflow: hidden;
 
   .half {
     display: flex;
-    width: 49.85vw;
     justify-content: center;
+    width: 49.85vw;
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,26 +111,37 @@ export default {
 
 .project-wrapper {
   position: relative;
-  overflow: hidden;
 
   .project-details {
     opacity: 0;
     transition: all 0.3s ease;
 
-    background-color: #1b1b1b;
+    background-color: #5220dd;
     color: white;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-  }
 
-  .project-links {
-    a {
-      margin: 10px;
-      font-size: 30px;
-      color: #06d6a0;
+    .details-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        margin: 0px 0px 15px 0px;
+      }
+
+      .description {
+        margin: 0px 0px 30px 0px;
+      }
+      .project-links {
+        a {
+          font-size: 35px;
+          color: #ffc647;
+          margin: 0px 10px;
+        }
+      }
     }
   }
 }

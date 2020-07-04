@@ -6,15 +6,15 @@ const types = [
       {
         name: 'Filtr',
         description:
-          'Image-editing app using Python, Django, PostgreSQL & React.js.',
+          'Image-editing app made as the final 1-week pair project at General Assembly\'s SEI Course.',
         size: 'half',
-        img: 'filtr.png',
+        img: 'filtr-3.png',
         website: 'https://the-filtr-app.herokuapp.com/',
         source: 'https://github.com/purvitrivedi/image-editing-app'
       },
       {
         name: 'Tetris',
-        description: 'Vanilla JavaScript, HTML & CSS.',
+        description: '1-week solo project to make a game of your choice',
         size: 'half',
         img: 'tetris-5.png',
         website: 'https://purvitrivedi.github.io/project-one/',
@@ -23,7 +23,7 @@ const types = [
       {
         name: 'Hikr',
         description:
-          'A full-stack Hike search & community app made using Node.js, Express, MongoDB & React.js',
+          '1-week group project of 3 developers where we made a Hike search & community app',
         size: 'full',
         img: 'hikr-2.png',
         website: 'https://hikrr.herokuapp.com/',
@@ -31,11 +31,11 @@ const types = [
       },
 
       {
-        name: 'Search & Play',
+        name: 'Search + Play',
         description:
-          'An interactive music search & play app made using React.js and iTunes Search API',
+          'An interactive music search & play app made using iTunes Search API as part of a 2 day pair Hackathon',
         size: 'full',
-        img: 'search-play.png',
+        img: 'S+P.png',
         website: 'https://search-and-play.netlify.app/',
         source: 'https://github.com/purvitrivedi/search-and-play'
       }
@@ -43,7 +43,7 @@ const types = [
   },
   {
     id: 2,
-    heading: 'User Research',
+    heading: 'UX Research',
     projects: [
       {
         name: 'LUMI',
@@ -63,13 +63,8 @@ const types = [
     projects: [
       {
         name: 'KALA',
-        size: 'half',
+        size: 'full',
         img: 'kala.png'
-      },
-      {
-        name: 'Women in Music Tech',
-        size: 'half',
-        img: 'wimt-2.png'
       }
     ]
   }

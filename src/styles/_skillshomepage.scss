@@ -1,0 +1,21 @@
+.skill-svg {
+  display: flex;
+  flex-wrap: wrap;
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+
+    svg {
+      width: 1.4em;
+    }
+
+    p {
+      font-size: 11px;
+      margin: 0px 10px;
+    }
+  }
+}

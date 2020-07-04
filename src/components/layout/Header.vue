@@ -17,7 +17,7 @@
         {{ type }}
       </router-link>
       <div class="about-nav">
-        <router-link to="/about" tag="a">about</router-link>
+        <router-link to="/about" tag="a">contact</router-link>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
   name: 'Header',
   data() {
     return {
-      types: ['code', 'user research', 'music']
+      types: ['code', 'uxresearch', 'music']
     }
   }
 }
@@ -40,13 +40,14 @@ export default {
 .nav {
   margin-top: 1.7em;
   padding: 0px 0.85em;
+  // padding: 0px 0px 0px 39px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 
   a {
-    color: black;
+    color: #17224d;
     text-decoration: none;
   }
 
@@ -68,13 +69,13 @@ export default {
       font-size: 14px;
     }
     a:hover {
-      color:#1b1b1b ;
+      color: #5220dd;
     }
   }
 
   .about-nav {
     .is-active {
-      color: #1b1b1b;
+      color: #5220dd;
     }
   }
 }
