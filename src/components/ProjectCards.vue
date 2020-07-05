@@ -109,9 +109,16 @@ export default {
     background-size: cover;
     margin-bottom: 5px;
 
+    @media (max-width: 500px) {
+      width: 100vw;
+    }
+
     .project-details {
       width: 49.85vw;
       height: 50vh;
+      @media (max-width: 500px) {
+        width: 100vw;
+      }
     }
   }
 
@@ -165,7 +172,9 @@ export default {
 
       @media (max-width: 375px) {
         .description {
-          font-size: 12px;
+          font-size: 14px;
+          padding: 0px 20px;
+          
         }
       }
       .project-links,
@@ -210,6 +219,10 @@ export default {
   margin-bottom: 5px;
   background-color: #5220dd;
 
+  @media (max-width: 500px) {
+    height: 55vh;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,8 +236,11 @@ export default {
       border-radius: 0.25rem;
       margin: 10px;
 
+      @media (max-width: 500px) {
+        margin: 5px;
+      }
+
       svg {
-        width: px;
         padding: 13px 26px;
       }
 

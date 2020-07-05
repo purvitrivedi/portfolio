@@ -15,8 +15,8 @@
       further.
     </p>
     <p>
-      Recently, I finished the Software Engineering Immersive course at General
-      Assembly, where I trained as a Full-Stack Engineer
+      Recently, I completed the Software Engineering Immersive course at General
+      Assembly, where I trained as a Full-Stack Engineer.
     </p>
 
     <p>

@@ -41,20 +41,39 @@ export default {
     flex-direction: column;
 
     @media (max-width: 500px) {
-      height: 70vh;
+      height: 65vh;
+      font-size: 0.9em;
+      padding: 20px;
+    }
+
+    @media (max-width: 375px) {
+      height: 60vh;
     }
 
     @media (max-height: 700px) {
       font-size: 0.8em;
     }
 
+    @media (max-height: 570px) {
+      height: 54vh;
+      padding-bottom: 0px;
+    }
+
     .long-bio {
       font-size: 1.25em;
       margin-bottom: 2em;
+      color: #17224d;
 
       @media (max-width: 1200px) {
         padding: 0px 20px;
         font-size: 1.15em;
+        margin-bottom: 1em;
+      }
+
+      @media (max-height: 570px) {
+        overflow: scroll;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
       }
 
       .hello {
@@ -96,6 +115,10 @@ export default {
       height: 20vh;
     }
 
+    @media (max-height: 570px) {
+      height: 30vh;
+    }
+
     .contact-wrapper {
       width: 49.85vw;
       height: 100%;
@@ -114,8 +137,12 @@ export default {
 
         .email-wrapper {
           padding: 2.438em 0px 0px 2.438em;
+
+          @media (max-width: 500px) {
+            padding: 1.438em 0px 0px 2.438em;
+          }
           p {
-            margin: 0px 0px 10px 0px;
+            margin: 0px 0px 4px 0px;
           }
 
           a {
@@ -126,7 +153,7 @@ export default {
             text-decoration: none;
 
             @media (max-width: 500px) {
-              font-size: 1em;
+              font-size: 1.5em;
             }
           }
         }
@@ -138,7 +165,11 @@ export default {
             padding: 0px 0px 1.563em 2.438em;
 
             @media (max-height: 700px) {
-              margin-top: 10px;
+              margin-top: 15px;
+            }
+
+            @media (max-height: 570px) {
+              padding: 0px 0px 2em 2.438em;
             }
 
             a {
@@ -149,6 +180,10 @@ export default {
               @media (max-width: 500px) {
                 font-size: 1.5em;
               }
+            }
+
+            a:hover {
+              color: #ffc647;
             }
           }
         }

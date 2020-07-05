@@ -47,9 +47,13 @@ export default {
 
   @media (max-width: 500px) {
     flex-direction: column;
+    align-items: flex-start;
 
     .name {
       margin-bottom: 20px;
+      align-self: flex-start;
+      padding: 0px 20px;
+      
     }
   }
 
@@ -69,21 +73,37 @@ export default {
     display: flex;
     justify-content: flex-end;
     flex-grow: 2;
+
+    @media (max-width: 500px) {
+      padding: 0px 20px;
+    }
+
     a {
       margin: 0 10px;
       color: #aaaaaa;
       font-weight: 500;
       font-size: 16px;
+
+      @media (max-width: 500px) {
+        margin: 0px 10px 0px 0px;
+      }
     }
     a:hover {
-      color: #17224d;
+      color: #5220dd;
+
+      @media (max-width: 500px) {
+        font-weight: 600;
+      }
     }
   }
 
   .about-nav {
     .is-active {
-      color: #17224d;
+      color: #5220dd;
+      font-weight: 600;
     }
   }
+
+  
 }
 </style>
