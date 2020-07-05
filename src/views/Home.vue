@@ -5,11 +5,11 @@
         Software Engineer with experience in User Research.
       </p>
       <p>
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam nisi.
+        Loves creating music, art & interactive experiences on the web.
       </p>
     </div>
     <div class="work">
+      <div class="full"></div>
       <ProjectCards
         v-for="type in work.types"
         :key="type.id"
@@ -45,7 +45,7 @@ export default {
     font-weight: 500;
     margin: 5px;
     font-size: 1.4rem;
-    color: #17224D;
+    color: #17224d;
   }
 }
 </style>

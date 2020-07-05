@@ -66,16 +66,16 @@ export default {
       margin: 0 10px;
       color: #aaaaaa;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 16px;
     }
     a:hover {
-      color: #5220dd;
+      color: #17224d;
     }
   }
 
   .about-nav {
     .is-active {
-      color: #5220dd;
+      color: #17224d;
     }
   }
 }

@@ -14,7 +14,7 @@ const types = [
       },
       {
         name: 'Tetris',
-        description: '1-week solo project to make a game of your choice',
+        description: '1-week solo project where I made a game of my choice',
         size: 'half',
         img: 'tetris-5.png',
         website: 'https://purvitrivedi.github.io/project-one/',
@@ -48,12 +48,16 @@ const types = [
       {
         name: 'LUMI',
         size: 'half',
-        img: 'lumi.png'
+        img: 'lumi.png',
+        website: 'https://www.youtube.com/watch?v=P6_u4cn5IYw',
+        description: 'Led qualitative & quantitative User Research on LUMI from concept through to commercial launch'
       },
       {
-        name: 'ROLI Studio Player',
+        name: 'ROLI Studio',
         size: 'half',
-        img: 'rsp.png'
+        img: 'rsp.png',
+        website: 'https://www.youtube.com/watch?v=N5A3vEhQlb4',
+        description: 'Led research to improve both the hardware & software User Experience of ROLI Studio'
       }
     ]
   },
@@ -64,7 +68,10 @@ const types = [
       {
         name: 'KALA',
         size: 'full',
-        img: 'kala.png'
+        img: 'kala.png',
+        itunes: 'https://music.apple.com/gb/album/origin/1196764578',
+        spotify: 'https://open.spotify.com/album/2aB2h6o0qaWfrqPoBTAyOG',
+        description: 'Written, Programmed & Produces in collaboration with Veslemøy Rustad Holseter, KALA explores human emotions through the design of everyday sounds '
       }
     ]
   }

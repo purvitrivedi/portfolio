@@ -7,19 +7,20 @@
       <div class="contact-wrapper">
         <Contact />
       </div>
-      <div class="skills-wrapper">
-        <Skills />
+      <div class="copy-wrapper">
+        <p class="copyright">
+          © Copyright 2020 Purvi Trivedi - Made with VueJS
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Skills from '../components/skills/AllSkills'
 import Bio from '../components/Bio'
 import Contact from '../components/layout/Contact'
 export default {
-  components: { Skills, Bio, Contact }
+  components: { Bio, Contact }
 }
 </script>
 
@@ -29,23 +30,40 @@ export default {
   flex-direction: column;
   align-items: center;
 
+  @media (max-height: 700px) {
+  }
+
   .about {
     height: 42vh;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
+    @media (max-width: 500px) {
+      height: 70vh;
+    }
+
+    @media (max-height: 700px) {
+      font-size: 0.8em;
+    }
+
     .long-bio {
-      font-size: 15px;
+      font-size: 1.25em;
       margin-bottom: 2em;
+
+      @media (max-width: 1200px) {
+        padding: 0px 20px;
+        font-size: 1.15em;
+      }
+
       .hello {
         position: relative;
-        font-size: 20px;
         .wave {
           font-size: 20px;
           position: absolute;
           margin-left: 5px;
-          top: -7px;
+          top: -5px;
           animation-name: shaking;
           animation-duration: 1s;
           animation-iteration-count: infinite;
@@ -74,10 +92,18 @@ export default {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 500px) {
+      height: 20vh;
+    }
+
     .contact-wrapper {
       width: 49.85vw;
       height: 100%;
       background-color: #5220dd;
+
+      @media (max-width: 500px) {
+        width: 100vw;
+      }
 
       .contact-me {
         height: 100%;
@@ -87,56 +113,63 @@ export default {
         justify-content: space-between;
 
         .email-wrapper {
-          // background-color: red;
-          padding: 39px 0px 0px 39px;
+          padding: 2.438em 0px 0px 2.438em;
           p {
             margin: 0px 0px 10px 0px;
           }
 
           a {
+            font-family: 'Space Bold', sans-serif;
             font-size: 25px;
             color: #ffc647;
             font-weight: 600;
             text-decoration: none;
+
+            @media (max-width: 500px) {
+              font-size: 1em;
+            }
           }
         }
         .footer {
-          background-color: powderblue;
-        }
+          display: flex;
+          justify-content: space-between;
 
-        .copyright {
-          align-self: flex-end;
+          .footer-icon {
+            padding: 0px 0px 1.563em 2.438em;
+
+            @media (max-height: 700px) {
+              margin-top: 10px;
+            }
+
+            a {
+              font-size: 40px;
+              color: #f0f4ff;
+              margin-right: 30px;
+
+              @media (max-width: 500px) {
+                font-size: 1.5em;
+              }
+            }
+          }
         }
       }
     }
-    .skills-wrapper {
+    .copy-wrapper {
       background-color: #ffc647;
       width: 49.85vw;
       height: 100%;
       display: flex;
-      align-items: center;
+      justify-content: flex-end;
 
-      .skill-svg {
-        display: flex;
+      @media (max-width: 500px) {
+        display: none;
+      }
 
-        .icon {
-          border: 1px solid #17224d;
-          border-radius: 0.25rem;
-          margin: 10px;
-
-          svg {
-            width: px;
-            padding: 12px 24px;
-          }
-
-          p {
-            margin-top: 0px;
-            font-size: 11px;
-          }
-          svg:hover {
-            transform: scale(1.1);
-          }
-        }
+      .copyright {
+        color: #17224d;
+        font-size: 12px;
+        padding: 0px 39px 15px 0px;
+        align-self: flex-end;
       }
     }
   }

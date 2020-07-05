@@ -1,6 +1,6 @@
 <template>
   <div class="long-bio">
-    <p class="hello">Hiya! <span class="wave">👋</span></p>
+    <p class="hello">Hiya <span class="wave">👋</span></p>
     <p>
       I’m a software engineer with experience in UX Research and Music
       Technology.

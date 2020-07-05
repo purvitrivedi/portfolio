@@ -33,10 +33,28 @@
             <div v-if="project.name === 'Tetris'">
               <SkillsTetris />
             </div>
-            <div class="project-links">
-              <a :href="project.website" target="_blank"
-                ><i class="fas fa-link"></i
-              ></a>
+            <div class="music-links">
+              <a
+                v-if="heading !== 'Music'"
+                :href="project.website"
+                target="_blank"
+              >
+                <i class="fas fa-link"></i>
+              </a>
+              <a
+                v-if="heading === 'Music'"
+                :href="project.itunes"
+                target="_blank"
+              >
+                <i class="fab fa-apple"></i>
+              </a>
+              <a
+                v-if="heading === 'Music'"
+                :href="project.spotify"
+                target="_blank"
+              >
+                <i class="fab fa-spotify"></i>
+              </a>
               <a
                 v-if="heading === 'Code'"
                 :href="project.source"
@@ -48,6 +66,9 @@
         </div>
       </div>
     </div>
+    <div v-if="heading === 'Code'" class="full-skill">
+      <AllSkills />
+    </div>
   </div>
 </template>
 
@@ -56,9 +77,10 @@ import SkillsFiltr from '../components/skills/SkillsFiltr'
 import SkillsHikr from '../components/skills/SkillsHikr'
 import SkillsSP from '../components/skills/SkillsSP'
 import SkillsTetris from '../components/skills/SkillsTetris'
+import AllSkills from '../components/skills/AllSkills'
 export default {
   name: 'ProjectCards',
-  components: { SkillsFiltr, SkillsHikr, SkillsSP, SkillsTetris },
+  components: { AllSkills, SkillsFiltr, SkillsHikr, SkillsSP, SkillsTetris },
   props: {
     heading: {
       default: 'Other works'
@@ -102,6 +124,9 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media (max-width: 500px) {
+      background-size: auto;
+    }
     .project-details {
       width: 100vw;
       height: 55vh;
@@ -128,19 +153,46 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       h2 {
         margin: 0px 0px 15px 0px;
       }
 
       .description {
         margin: 0px 0px 30px 0px;
+        padding: 0px 10px;
       }
-      .project-links {
+
+      @media (max-width: 375px) {
+        .description {
+          font-size: 12px;
+        }
+      }
+      .project-links,
+      .music-links {
         a {
           font-size: 35px;
           color: #ffc647;
           margin: 0px 10px;
+
+          @media (max-width: 350px) {
+            margin-top: 5px;
+            font-size: 25px;
+          }
         }
+
+        a:hover {
+          color: white;
+        }
+      }
+
+      .music-links {
+        .fa-apple {
+          font-size: 40px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -149,6 +201,42 @@ export default {
 .project-wrapper:hover {
   .project-details {
     opacity: 1;
+  }
+}
+
+.full-skill {
+  width: 100vw;
+  height: 27.5vh;
+  margin-bottom: 5px;
+  background-color: #5220dd;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+
+  .skill-svg {
+    justify-content: center;
+    .icon {
+      border: 1px solid #fff;
+      border-radius: 0.25rem;
+      margin: 10px;
+
+      svg {
+        width: px;
+        padding: 13px 26px;
+      }
+
+      p {
+        color: #ffc647;
+        margin: 0px 0px 10px 0px;
+        font-size: 11px;
+      }
+      svg:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 </style>

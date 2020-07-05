@@ -1,7 +1,7 @@
 .skill-svg {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   .icon {
     display: flex;
     flex-direction: column;
@@ -9,13 +9,20 @@
     justify-items: center;
     margin-bottom: 50px;
 
+    @media (max-width: 375px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 350px) {
+      margin-bottom: 10px;
+    }
     svg {
-      width: 1.4em;
+      width: 1em;
     }
 
     p {
-      font-size: 11px;
-      margin: 0px 10px;
+      font-size: 10px;
+      margin: 0px 5px;
     }
   }
 }

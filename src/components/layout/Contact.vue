@@ -20,7 +20,6 @@
           ><i class="fab fa-github"></i
         ></a>
       </div>
-      <p class="copyright">© Copyright 2020 Purvi Trivedi - Made with VueJS</p>
     </div>
   </div>
 </template>
