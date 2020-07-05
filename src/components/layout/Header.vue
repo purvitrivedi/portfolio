@@ -40,11 +40,18 @@ export default {
 .nav {
   margin-top: 1.7em;
   padding: 0px 0.85em;
-  // padding: 0px 0px 0px 39px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    .name {
+      margin-bottom: 20px;
+    }
+  }
 
   a {
     color: #17224d;

@@ -47,5 +47,13 @@ export default {
     font-size: 1.4rem;
     color: #17224d;
   }
+
+  @media (max-width: 500px) {
+    margin: 2em 2em 3.1em 2em;
+
+    p {
+      font-size: 1.2em;
+    }
+  }
 }
 </style>
