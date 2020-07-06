@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -41,22 +42,14 @@ export default {
     flex-direction: column;
 
     @media (max-width: 500px) {
-      height: 65vh;
       font-size: 0.9em;
       padding: 20px;
-    }
-
-    @media (max-width: 375px) {
-      height: 60vh;
+      height: 53vh;
+      padding-bottom: 0px;
     }
 
     @media (max-height: 700px) {
       font-size: 0.8em;
-    }
-
-    @media (max-height: 570px) {
-      height: 54vh;
-      padding-bottom: 0px;
     }
 
     .long-bio {
@@ -70,7 +63,7 @@ export default {
         margin-bottom: 1em;
       }
 
-      @media (max-height: 570px) {
+      @media (max-width: 500px) {
         overflow: scroll;
         padding-bottom: 0px;
         margin-bottom: 0px;
@@ -112,10 +105,6 @@ export default {
     justify-content: space-between;
 
     @media (max-width: 500px) {
-      height: 20vh;
-    }
-
-    @media (max-height: 570px) {
       height: 30vh;
     }
 
@@ -168,7 +157,7 @@ export default {
               margin-top: 15px;
             }
 
-            @media (max-height: 570px) {
+            @media (max-height: 700px) {
               padding: 0px 0px 2em 2.438em;
             }
 

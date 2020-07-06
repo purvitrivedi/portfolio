@@ -17,7 +17,7 @@
             .join('')
         "
       >
-        <div class="project-details">
+        <a class="project-details">
           <div class="details-wrap">
             <h2>{{ project.name }}</h2>
             <p class="description">{{ project.description }}</p>
@@ -63,7 +63,7 @@
               ></a>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div v-if="heading === 'Code'" class="full-skill">
@@ -174,7 +174,6 @@ export default {
         .description {
           font-size: 14px;
           padding: 0px 20px;
-          
         }
       }
       .project-links,
@@ -212,6 +211,11 @@ export default {
     opacity: 1;
   }
 }
+.project-wrapper:active {
+  .project-details {
+    opacity: 1;
+  }
+}
 
 .full-skill {
   width: 100vw;
@@ -242,6 +246,10 @@ export default {
 
       svg {
         padding: 13px 26px;
+
+        @media (max-width: 500px) {
+          padding: 11px 23px;
+        }
       }
 
       p {

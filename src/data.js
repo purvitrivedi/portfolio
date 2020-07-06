@@ -6,7 +6,7 @@ const types = [
       {
         name: 'Filtr',
         description:
-          'Image-editing app made as the final 1-week pair project at General Assembly\'s SEI Course.',
+          'Final project for General Assembly\'s SEI Course. 1-week pair project where we created an Image-editing app.',
         size: 'half',
         img: 'filtr-3.png',
         website: 'https://the-filtr-app.herokuapp.com/',
@@ -14,7 +14,7 @@ const types = [
       },
       {
         name: 'Tetris',
-        description: '1-week solo project where I made a game of my choice',
+        description: '1-week solo project where I made a game using Vanilla JavaScript and DOM manipulation',
         size: 'half',
         img: 'tetris-5.png',
         website: 'https://purvitrivedi.github.io/project-one/',
@@ -23,7 +23,7 @@ const types = [
       {
         name: 'Hikr',
         description:
-          '1-week group project of 3 developers where we made a Hike search & community app',
+          '1-week group project where we made a full-stack Hike search & community app',
         size: 'full',
         img: 'hikr-2.png',
         website: 'https://hikrr.herokuapp.com/',
@@ -33,7 +33,7 @@ const types = [
       {
         name: 'Search + Play',
         description:
-          'An interactive music search & play app made using iTunes Search API as part of a 2 day pair Hackathon',
+          'An interactive music app made using iTunes Search API as part of a 2 day pair Hackathon',
         size: 'full',
         img: 'S+P.png',
         website: 'https://search-and-play.netlify.app/',
@@ -71,7 +71,7 @@ const types = [
         img: 'kala.png',
         itunes: 'https://music.apple.com/gb/album/origin/1196764578',
         spotify: 'https://open.spotify.com/album/2aB2h6o0qaWfrqPoBTAyOG',
-        description: 'Written, Programmed & Produces in collaboration with Veslemøy Rustad Holseter, KALA explores human emotions through the design of everyday sounds '
+        description: 'Written, Programmed & Produced in collaboration with Veslemøy Rustad Holseter, KALA explores human emotions through the design of everyday sounds '
       }
     ]
   }

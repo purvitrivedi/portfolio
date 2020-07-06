@@ -7,7 +7,6 @@
 
 <script>
 import Header from './components/layout/Header'
-
 export default {
   name: 'app',
   components: {
@@ -18,17 +17,17 @@ export default {
 
 <style lang="scss">
 @font-face {
-    font-family: 'Space';
-    src: url('./styles/otf/SpaceGrotesk-Regular.otf');
+  font-family: 'Space';
+  src: url('./styles/otf/SpaceGrotesk-Regular.otf');
 
-     font-family: 'Space Bold';
-    src: url('./styles/otf/SpaceGrotesk-Bold.otf');
+  font-family: 'Space Bold';
+  src: url('./styles/otf/SpaceGrotesk-Bold.otf');
 }
 body {
   margin: 0px;
   // font-family: 'Questrial', sans-serif;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Space', sans-serif;
-  background-color: #F0F4FF;
+  background-color: #f0f4ff;
 }
 </style>
