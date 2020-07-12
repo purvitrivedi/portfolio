@@ -102,7 +102,7 @@ export default {
   .half {
     display: flex;
     justify-content: center;
-    width: 49.85vw;
+    width: 49.85%;
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@ export default {
     }
 
     .project-details {
-      width: 49.85vw;
+      width: 100%;
       height: 50vh;
       @media (max-width: 500px) {
         width: 100vw;
@@ -143,6 +143,7 @@ export default {
 
 .project-wrapper {
   position: relative;
+  width: 100%;
 
   .project-details {
     opacity: 0;
