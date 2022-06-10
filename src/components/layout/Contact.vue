@@ -13,9 +13,6 @@
           target="_blank"
           ><i class="fab fa-linkedin"></i
         ></a>
-        <a href="http://instagram.com/purvitrivedi" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
         <a href="https://github.com/purvitrivedi" target="_blank"
           ><i class="fab fa-github"></i
         ></a>

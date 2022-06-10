@@ -20,7 +20,7 @@
     </p>
 
     <p>
-      Currently, I work as a Frontend developer at <a href="https://p.ota.to/" target="_blank">Potato.</a>
+      Currently, I work as a Fullstack developer at <a href="https://p.ota.to/" target="_blank">Potato.</a>
     </p>
   </div>
 </template>

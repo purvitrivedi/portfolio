@@ -66,9 +66,6 @@
         </a>
       </div>
     </div>
-    <div v-if="heading === 'Code'" class="full-skill">
-      <AllSkills />
-    </div>
   </div>
 </template>
 
@@ -77,10 +74,9 @@ import SkillsFiltr from '../components/skills/SkillsFiltr'
 import SkillsHikr from '../components/skills/SkillsHikr'
 import SkillsSP from '../components/skills/SkillsSP'
 import SkillsTetris from '../components/skills/SkillsTetris'
-import AllSkills from '../components/skills/AllSkills'
 export default {
   name: 'ProjectCards',
-  components: { AllSkills, SkillsFiltr, SkillsHikr, SkillsSP, SkillsTetris },
+  components: { SkillsFiltr, SkillsHikr, SkillsSP, SkillsTetris },
   props: {
     heading: {
       default: 'Other works'
@@ -215,53 +211,6 @@ export default {
 .project-wrapper:active {
   .project-details {
     opacity: 1;
-  }
-}
-
-.full-skill {
-  width: 100vw;
-  height: 27.5vh;
-  margin-bottom: 5px;
-  background-color: #5220dd;
-
-  @media (max-width: 500px) {
-    height: 55vh;
-  }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: scroll;
-
-  .skill-svg {
-    justify-content: center;
-    .icon {
-      border: 1px solid #fff;
-      border-radius: 0.25rem;
-      margin: 10px;
-
-      @media (max-width: 500px) {
-        margin: 5px;
-      }
-
-      svg {
-        padding: 13px 26px;
-
-        @media (max-width: 500px) {
-          padding: 11px 23px;
-        }
-      }
-
-      p {
-        color: #ffc647;
-        margin: 0px 0px 10px 0px;
-        font-size: 11px;
-      }
-      svg:hover {
-        transform: scale(1.1);
-      }
-    }
   }
 }
 </style>
