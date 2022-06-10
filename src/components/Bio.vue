@@ -15,13 +15,12 @@
       further.
     </p>
     <p>
-      Recently, I completed the Software Engineering Immersive course at General
+      I completed the Software Engineering Immersive course at General
       Assembly, where I trained as a Full-Stack Engineer.
     </p>
 
     <p>
-      I am now looking for my first role as a developer in a collaborative team where I can share my creativity and
-      learn from others.
+      Currently, I work as a Frontend developer at <a href="https://p.ota.to/" target="_blank">Potato.</a>
     </p>
   </div>
 </template>
